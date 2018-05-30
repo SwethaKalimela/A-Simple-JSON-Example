@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JSON</title>
+    <script>
+        var details = {
+    1:{
+        "name" : "Swetha",
+        "age" : "24yrs",
+        "weight" : "70kgs",
+        "height" : "5ft",
+        "friends" : ["Swathi","Pavani","Divya"], //array of names
+        "college" : {                           //college being another object with the details name, city, pin-code         
+            "name" : "GRIET",
+            "city"  : "hyd",
+            "pin-code" : 500082,
+        } 
+    },
+    2:{
+        "name" : "Swathi",
+        "age" : "26yrs",
+        "weight" : "80kgs",
+        "height" : "6ft",
+        "friends" : ["Swetha","Pavani","Divya"],
+        "college" : {
+            "name" : "BVRIT",
+            "city"  : "hyd",
+            "pin-code" : 502032,
+        } 
+    },
+    3:{
+        "name" : "Harika",
+        "age" : "28yrs",
+        "weight" : "55kgs",
+        "height" : "5.5ft",
+        "friends" : ["Swetha","Pavani","Divya","Harika"],
+        "college" : {
+            "name" : "CBIT",
+            "city"  : "hyd",
+            "pin-code" : 500018,
+        } 
+    }
+}
+function getLength(users) { //function to count length with parameter which gets the JSON data 
+    var d;
+    var counter = 0;
+  
+    for (d in users) {
+      counter++;
+    }
+    return counter;
+  }
+var length = getLength(details); //variable length to store number of records in json obj
+for (var i=1; i<=length; i++){
+    console.log(details[i]); //to print each record, initializing i from 1 to dislay student record from with key 1
+}  
+</script>
+</head>
+</html>
